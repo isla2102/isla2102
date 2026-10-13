@@ -1,13 +1,10 @@
-/* Microsoft Store 제품 페이지 URL.
-   비어 있으면 "출시 예정" 상태(버튼은 CTA 섹션으로 이동, 아이콘 숨김).
-   출시 후 URL을 넣으면 모든 다운로드 버튼이 스토어로 연결되고 data-launch-label 문구로 바뀝니다.
-   (CTA 섹션 제목·본문의 "곧 만나요" 문구는 출시 때 직접 수정) */
-const EDGESHOT_STORE_URL = "";
+/* Microsoft Store 제품 페이지. HTML에도 같은 URL을 제공해 JavaScript 없이 설치 링크를 사용할 수 있습니다. */
+const EDGESHOT_STORE_URL = "https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&gl=KR&ocid=pdpshare";
 if (EDGESHOT_STORE_URL) {
   document.querySelectorAll("[data-store-link]").forEach(el => {
     el.href = EDGESHOT_STORE_URL;
     el.target = "_blank";
-    el.rel = "noopener";
+    el.rel = "noopener noreferrer";
     el.classList.remove("is-coming-soon");
     el.removeAttribute("aria-disabled");
     el.querySelectorAll("[data-launch-label]").forEach(label => { label.textContent = label.dataset.launchLabel; });
@@ -267,14 +264,28 @@ const getHeaderHeight=()=>viewportQueries.desktop.matches?56:(viewportQueries.mo
   window.addEventListener('resize',liftTopButton,{passive:true});
   liftTopButton();
   topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:prefersReducedMotion()?'auto':'smooth'}));
-  toggle.addEventListener('click',()=>{
-    const open=menu.classList.toggle('open');
+  const setMenuOpen=(open)=>{
+    menu.classList.toggle('open',open);
     toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');
+  };
+  toggle.addEventListener('click',()=>setMenuOpen(!menu.classList.contains('open')));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&menu.classList.contains('open')){
+      setMenuOpen(false);
+      toggle.focus();
+    }
   });
+  document.addEventListener('click',event=>{
+    if(menu.classList.contains('open')&&!menu.contains(event.target)&&!toggle.contains(event.target)) setMenuOpen(false);
+  });
+  window.addEventListener('resize',()=>{
+    if(document.documentElement.clientWidth>=900) setMenuOpen(false);
+  },{passive:true});
   menu.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{
     const section=document.querySelector(link.getAttribute('href'));
     const index=sections.indexOf(section);
-    menu.classList.remove('open');
+    setMenuOpen(false);
     if(index<0) return;
     event.preventDefault();
     scrollToSection(index);

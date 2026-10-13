@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-13",
+  "browser": "Edge / Playwright",
+  "storeAvailability": "User confirmed installable; no purchase or installation performed",
+  "checks": [
+    {
+      "width": 390,
+      "status": "passed",
+      "checks": [
+        "3 Store links",
+        "GitHub/Tistory/Notion destinations",
+        "released copy",
+        "guide review",
+        "runtime/asset loading",
+        "no page overflow",
+        "menu link close",
+        "Escape focus return",
+        "outside click close",
+        "desktop resize close"
+      ]
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "checks": [
+        "3 Store links",
+        "GitHub/Tistory/Notion destinations",
+        "released copy",
+        "guide review",
+        "runtime/asset loading",
+        "no page overflow",
+        "menu link close",
+        "Escape focus return",
+        "outside click close",
+        "desktop resize close"
+      ]
+    },
+    {
+      "width": 1024,
+      "status": "passed",
+      "checks": [
+        "3 Store links",
+        "GitHub/Tistory/Notion destinations",
+        "released copy",
+        "guide review",
+        "runtime/asset loading",
+        "no page overflow"
+      ]
+    },
+    {
+      "width": 1440,
+      "status": "passed",
+      "checks": [
+        "3 Store links",
+        "GitHub/Tistory/Notion destinations",
+        "released copy",
+        "guide review",
+        "runtime/asset loading",
+        "no page overflow"
+      ]
+    },
+    {
+      "javascript": false,
+      "status": "passed",
+      "checks": [
+        "Store links work without JavaScript"
+      ]
+    }
+  ]
+}

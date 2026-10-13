@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-13",
+  "browser": "Microsoft Edge / Playwright",
+  "checks": [
+    {
+      "width": 320,
+      "sections": 11,
+      "overflow": false,
+      "broken": [],
+      "missingAnchors": [],
+      "implemented": {
+        "--layout-grid-columns": "4",
+        "--layout-grid-gutter": "16px",
+        "--layout-page-padding": "20px",
+        "--layout-container-max": "1120px",
+        "--layout-header-height": "48px",
+        "--component-action-height": "44px",
+        "--type-display": "2.5rem",
+        "--type-section": "1.75rem",
+        "--type-card": "1.25rem",
+        "--type-lead": "1.0625rem"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "sections": 11,
+      "overflow": false,
+      "broken": [],
+      "missingAnchors": [],
+      "implemented": {
+        "--layout-grid-columns": "4",
+        "--layout-grid-gutter": "16px",
+        "--layout-page-padding": "20px",
+        "--layout-container-max": "1120px",
+        "--layout-header-height": "48px",
+        "--component-action-height": "44px",
+        "--type-display": "2.5rem",
+        "--type-section": "1.75rem",
+        "--type-card": "1.25rem",
+        "--type-lead": "1.0625rem"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 768,
+      "sections": 11,
+      "overflow": false,
+      "broken": [],
+      "missingAnchors": [],
+      "implemented": {
+        "--layout-grid-columns": "12",
+        "--layout-grid-gutter": "24px",
+        "--layout-page-padding": "32px",
+        "--layout-container-max": "1120px",
+        "--layout-header-height": "52px",
+        "--component-action-height": "44px",
+        "--type-display": "3.25rem",
+        "--type-section": "2.125rem",
+        "--type-card": "1.3125rem",
+        "--type-lead": "1.125rem"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 1024,
+      "sections": 11,
+      "overflow": false,
+      "broken": [],
+      "missingAnchors": [],
+      "implemented": {
+        "--layout-grid-columns": "12",
+        "--layout-grid-gutter": "24px",
+        "--layout-page-padding": "32px",
+        "--layout-container-max": "1120px",
+        "--layout-header-height": "52px",
+        "--component-action-height": "44px",
+        "--type-display": "3.25rem",
+        "--type-section": "2.125rem",
+        "--type-card": "1.3125rem",
+        "--type-lead": "1.125rem"
+      },
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "sections": 11,
+      "overflow": false,
+      "broken": [],
+      "missingAnchors": [],
+      "implemented": {
+        "--layout-grid-columns": "12",
+        "--layout-grid-gutter": "24px",
+        "--layout-page-padding": "32px",
+        "--layout-container-max": "1120px",
+        "--layout-header-height": "56px",
+        "--component-action-height": "48px",
+        "--type-display": "4rem",
+        "--type-section": "2.5rem",
+        "--type-card": "1.375rem",
+        "--type-lead": "1.125rem"
+      },
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "Screen reader not tested",
+    "200% browser zoom not tested",
+    "Physical touch device not tested",
+    "No claim of full WCAG conformance"
+  ]
+}

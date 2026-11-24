@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EdgeShot — 필요한 순간, 바로 캡처</title>
-<meta name="description" content="Alt + Shift + S 단축키로 선택하고, 표시하고 가린 뒤 바로 복사하는 Windows 캡처·주석 도구 EdgeShot.">
+<title>EdgeShot — 캡처하고 표시하고 가리기, 한 화면에서</title>
+<meta name="description" content="단축키 한 번으로 화면을 고르고, 화살표·글자·모자이크로 표시한 뒤 바로 붙여넣는 Windows 무료 캡처 도구 EdgeShot.">
 <meta name="theme-color" content="#0D7CFF">
 <!-- Share preview: 배포 후 og:url과 og:image를 절대 주소(https://...)로 바꿔주세요 -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="EdgeShot">
-<meta property="og:title" content="EdgeShot — 필요한 순간, 바로 캡처">
-<meta property="og:description" content="Alt + Shift + S 단축키로 선택하고, 표시하고 가린 뒤 바로 복사하세요. 오직 로컬에서만 동작하는 Windows 캡처 도구.">
+<meta property="og:title" content="EdgeShot — 캡처하고 표시하고 가리기, 한 화면에서">
+<meta property="og:description" content="단축키 한 번으로 고르고, 표시하고, 가린 뒤 바로 붙여넣으세요. 오직 로컬에서만 동작하는 Windows 무료 캡처 도구.">
 <meta property="og:url" content="">
 <meta property="og:image" content="assets/images/og_image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EdgeShot — 필요한 순간, 바로 캡처. 캡처 영역 선택과 주석 툴바 화면">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EdgeShot — 필요한 순간, 바로 캡처">
-<meta name="twitter:description" content="Alt + Shift + S 단축키로 선택하고, 표시하고 가린 뒤 바로 복사하세요.">
+<meta name="twitter:title" content="EdgeShot — 캡처하고 표시하고 가리기, 한 화면에서">
+<meta name="twitter:description" content="단축키 한 번으로 고르고, 표시하고, 가린 뒤 바로 붙여넣으세요.">
 <meta name="twitter:image" content="assets/images/og_image.jpg">
 <link rel="icon" type="image/svg+xml" href="assets/icons/EdgeShot_favicon.svg">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -31,12 +31,13 @@
   <div class="navbar">
     <a class="brand" href="#hero"><img class="brand__mark" src="assets/icons/EdgeShot_logo_mark.svg" alt=""><span><b>Edge</b>Shot</span></a>
     <nav class="nav" id="nav">
-      <a href="#compare">소개</a>
+      <a href="#usecases">쓰임새</a>
       <a href="#flow">사용 방법</a>
-      <a href="#annotation">주요 기능</a>
-      <a href="#story">개발 스토리</a>
+      <a href="#edit">새 기능</a>
+      <a href="#privacy">개인정보</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="download download-cta" href="https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&amp;gl=KR&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer" data-store-link><img src="assets/icons/download_2.svg" alt="" aria-hidden="true"><span data-launch-label="지금 다운로드">지금 다운로드</span></a>
+    <a class="download download-cta" href="https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&amp;gl=KR&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer" data-store-link><img src="assets/icons/download_2.svg" alt="" aria-hidden="true"><span data-launch-label="무료 다운로드">무료 다운로드</span></a>
     <button class="menu-toggle" id="menuToggle" aria-controls="nav" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -48,230 +49,203 @@
   <div class="container grid12">
     <div class="hero-copy">
       <div class="hero-heading">
-        <span class="overline">Capture · Annotate · Share</span>
-        <h1><span class="text-segment">필요한 순간, </span><wbr><span class="text-segment text-brand-primary">바로 캡처</span></h1>
+        <span class="overline">Windows 무료 캡처 도구</span>
+        <h1><span class="text-segment">캡처하고 </span><wbr><span class="text-segment">표시하고 </span><wbr><span class="text-segment">가리기, </span><wbr><span class="text-segment text-brand-primary">한 화면에서</span></h1>
       </div>
       <div class="hero-detail">
-        <p class="lead"><span class="text-segment"><span class="kbd-combo" aria-label="Alt + Shift + S"><kbd class="kbd-inline">Alt</kbd><span class="kbd-combo__plus" aria-hidden="true">+</span><kbd class="kbd-inline">Shift</kbd><span class="kbd-combo__plus" aria-hidden="true">+</span><kbd class="kbd-inline">S</kbd></span> 단축키로 선택하고,</span><br>
-          <span class="text-segment">표시하고 가린 뒤 </span><wbr><span class="text-segment">바로 복사하세요.</span></p>
+        <p class="lead"><span class="text-segment">단축키 한 번으로 화면을 고르고, </span><wbr><span class="text-segment">화살표·글자·모자이크로 표시한 뒤 </span><wbr><span class="text-segment">Ctrl + C로 바로 붙여넣으세요.</span></p>
+        <p class="hero-shortcut"><span class="kbd-combo" aria-label="기본 단축키 Alt + Shift + S"><kbd class="kbd-inline">Alt</kbd><span class="kbd-combo__plus" aria-hidden="true">+</span><kbd class="kbd-inline">Shift</kbd><span class="kbd-combo__plus" aria-hidden="true">+</span><kbd class="kbd-inline">S</kbd></span><span>기본 단축키 · 설정에서 바꿀 수 있어요</span></p>
       </div>
     </div>
     <div class="hero-cta">
         <div class="actions">
           <a class="btn primary download-cta" href="https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&amp;gl=KR&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer" data-store-link>
             <img src="assets/icons/download_2.svg" alt="" aria-hidden="true">
-            <span class="download-cta__label download-cta__label--default" data-launch-label="EdgeShot 다운로드">EdgeShot 다운로드</span>
-            <span class="download-cta__label download-cta__label--compact" data-launch-label="다운로드">다운로드</span>
+            <span class="download-cta__label download-cta__label--default" data-launch-label="무료로 받기">무료로 받기</span>
+            <span class="download-cta__label download-cta__label--compact" data-launch-label="받기">받기</span>
           </a>
-          <a class="btn feature-cta" href="#flow">
-            <span class="feature-cta__label feature-cta__label--default">사용 방법 보기</span>
+          <a class="btn feature-cta" href="#usecases">
+            <span class="feature-cta__label feature-cta__label--default">어디에 쓰는지 보기</span>
             <span class="feature-cta__label feature-cta__label--compact">살펴보기</span>
             <span aria-hidden="true"><img src="assets/icons/downside.svg" alt="" aria-hidden="true"></span>
           </a>
         </div>
-        <p class="hero-meta"><span>Windows 10 / 11 (64-bit)</span><span>Microsoft Store</span><span>무료</span></p>
+        <p class="hero-meta"><span>Windows 10 / 11 (64-bit)</span><span>Microsoft Store</span><span>무료</span><span>오프라인</span></p>
     </div>
     <div class="hero-media">
+      <!-- TODO: 실제 앱 녹화(8~12초 루프 mp4/webm + 포스터)가 준비되면 이 목업을 <video autoplay muted loop playsinline>으로 교체 -->
       <iframe
         class="hero-mockup-frame"
         src="assets/mockups/EdgeShot_Hero_Mockup_16x9_Final.html"
-        title="EdgeShot capture and annotation mockup"
+        title="EdgeShot 캡처와 주석 예시"
         loading="eager"
         scrolling="no"
       ></iframe>
     </div>
     <ul class="hero-benefits" aria-label="EdgeShot 핵심 특징">
-      <li class="hero-benefit"><img src="assets/icons/lightning.svg" alt=""><div><strong>빠른 캡처</strong><span>Alt + Shift + S</span></div></li>
-      <li class="hero-benefit"><img src="assets/icons/pen.svg" alt=""><div><strong>직관적인 주석</strong><span>도형 · 텍스트 · 모자이크</span></div></li>
-      <li class="hero-benefit"><img src="assets/icons/copy.svg" alt=""><div><strong>바로 복사 · 저장</strong><span>Ctrl + C · Ctrl + S</span></div></li>
+      <li class="hero-benefit"><img src="assets/icons/lightning.svg" alt=""><div><strong>빠른 캡처</strong><span>단축키 한 번 · 변경 가능</span></div></li>
+      <li class="hero-benefit"><img src="assets/icons/pen.svg" alt=""><div><strong>바로 표시</strong><span>도형 · 텍스트 · 모자이크</span></div></li>
+      <li class="hero-benefit"><img src="assets/icons/select.svg" alt=""><div><strong>그린 뒤에도 수정</strong><span>크기 · 위치 · 끝점</span></div></li>
       <li class="hero-benefit"><img src="assets/icons/local_only.svg" alt=""><div><strong>로컬 전용</strong><span>네트워크 연결 없음</span></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section soft" id="compare" data-title="Problem">
-  <div class="container compare-layout">
-    <div class="compare-copy">
-      <span class="overline">The Problem</span>
-      <h2><span class="text-segment">캡처는 쉬운데, </span><wbr><span class="text-segment">전달까지는 번거로웠습니다</span></h2>
-      <p class="lead"><span class="text-segment">Windows 기본 캡처 도구는 빠르지만, </span><wbr><span class="text-segment">표시를 하나 넣으려면 </span><wbr><span class="text-segment">편집기를 따로 열어야 했습니다.</span><br><span class="text-segment">EdgeShot은 영역 선택부터 주석, 복사까지 </span><wbr><span class="text-segment">한 번에 끝냅니다.</span></p>
+<section class="section soft" id="usecases" data-title="Use Cases">
+  <div class="container grid12 features-layout">
+    <div class="section-intro">
+      <span class="overline">Use Cases</span>
+      <h2><span class="text-segment">이럴 때 </span><wbr><span class="text-segment">쓰면 편해요</span></h2>
+      <p><span class="text-segment">화면을 찍어서 누군가에게 설명해야 할 때, </span><wbr><span class="text-segment">캡처 도구와 편집기를 오가지 않아도 됩니다.</span></p>
     </div>
-    <div class="mobile-carousel compare-carousel" data-carousel="compare">
-      <button class="carousel-arrow prev" type="button" aria-label="이전 비교 카드">‹</button>
-      <div class="compare-cards carousel-track">
-      <article class="problem-card problem-card--traditional">
-        <h3 class="problem-card__title">기존 방식 <small>(Windows 캡처 도구)</small></h3>
-        <div class="key-combo" aria-label="Windows 키, Shift 키, S 키">
-          <kbd class="keycap">Win</kbd><span class="key-combo__plus">+</span>
-          <kbd class="keycap">Shift</kbd><span class="key-combo__plus">+</span>
-          <kbd class="keycap">S</kbd>
+    <div class="feature-wrap">
+      <div class="feature-cards demo-cards">
+        <div class="feature-card demo-card">
+          <div class="demo demo-uc-point" aria-hidden="true">
+            <div class="dm-win"><i class="dm-bar"></i><i class="dm-line w70"></i><i class="dm-line w50"></i><i class="dm-line w60"></i><span class="dm-btn">구매하기</span></div>
+            <svg class="dm-arrow" viewBox="0 0 160 100" preserveAspectRatio="none"><path d="M20 22 C60 22 90 40 112 66" /><path class="dm-arrow-head" d="M100 62 L113 68 L111 54" /></svg>
+            <span class="dm-note">버튼 색 바꿔 주세요</span>
+            <span class="dm-toast">클립보드에 복사됨 · Ctrl+C</span>
+          </div>
+          <div><strong>“여기 고쳐 주세요”</strong><span>수정할 곳을 화살표와 글자로 짚고, 메신저에 바로 붙여넣기</span></div>
         </div>
-        <ol class="problem-card__steps">
-          <li><span class="problem-card__icon"><img src="assets/icons/area_selection.svg" alt=""></span><span>영역 선택</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/fast_capture.svg" alt=""></span><span>캡처 완료 알림</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/external_editor.svg" alt=""></span><span>편집 창 따로 열기</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/text.svg" alt=""></span><span>주석 추가 후 복사</span></li>
-        </ol>
-        <p class="problem-card__result">캡처와 편집이 분리된 흐름</p>
-      </article>
-      <article class="problem-card problem-card--edgeshot">
-        <h3 class="problem-card__title">EdgeShot 방식</h3>
-        <div class="key-combo" aria-label="Alt 키, Shift 키, S 키">
-          <kbd class="keycap">Alt</kbd><span class="key-combo__plus">+</span>
-          <kbd class="keycap">Shift</kbd><span class="key-combo__plus">+</span>
-          <kbd class="keycap">S</kbd>
+        <div class="feature-card demo-card">
+          <div class="demo demo-uc-mosaic" aria-hidden="true">
+            <div class="dm-win"><i class="dm-bar"></i>
+              <div class="dm-row"><b>이름</b><em>홍길동</em></div>
+              <div class="dm-row"><b>이메일</b><em>hong@example.com<s class="dm-mosaic"></s></em></div>
+              <div class="dm-row"><b>주문번호</b><em>2026-1124-0381<s class="dm-mosaic d2"></s></em></div>
+            </div>
+            <span class="dm-chip">모자이크 B · 강</span>
+          </div>
+          <div><strong>개인정보는 가리고 공유</strong><span>계정·연락처·주문번호를 모자이크로 덮은 뒤 보내기</span></div>
         </div>
-        <ol class="problem-card__steps">
-          <li><span class="problem-card__icon"><img src="assets/icons/area_selection.svg" alt=""></span><span>영역 선택</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/select.svg" alt=""></span><span>선택 영역 조정</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/pen.svg" alt=""></span><span>바로 주석 추가</span></li>
-          <li><span class="problem-card__icon"><img src="assets/icons/copy.svg" alt=""></span><span>Ctrl + C로 복사</span></li>
-        </ol>
-        <p class="problem-card__result">한 자리에서 끝나는 흐름</p>
-      </article>
+        <div class="feature-card demo-card">
+          <div class="demo demo-uc-guide" aria-hidden="true">
+            <div class="dm-win"><i class="dm-bar"></i><i class="dm-line w60"></i><div class="dm-toggle-row"><i class="dm-line w40"></i><span class="dm-switch"></span></div><i class="dm-line w50"></i></div>
+            <span class="dm-rect"></span>
+            <span class="dm-num">1</span>
+            <span class="dm-text">여기를 켜세요</span>
+          </div>
+          <div><strong>사용법 안내</strong><span>눌러야 할 버튼을 사각형으로 표시하고 설명을 적어 안내하기</span></div>
+        </div>
       </div>
-      <button class="carousel-arrow next" type="button" aria-label="다음 비교 카드">›</button>
+      <p class="demo-disclaimer">예시 화면은 실제 앱 동작을 재현한 애니메이션이에요.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="flow" data-title="Flow">
+<section class="section" id="flow" data-title="How to Use">
   <div class="container grid12 flow-layout">
     <div class="section-intro">
-      <span class="overline">A Faster Workflow</span>
-      <h2><span class="text-segment">선택부터 복사까지, </span><wbr><span class="text-segment">한 화면에서</span></h2>
-      <p><span class="text-segment">편집 도구를 켜고 끌 필요가 없습니다. </span><wbr><span class="text-segment">영역 조정, 주석, 모자이크까지 </span><wbr><span class="text-segment">캡처한 화면 위에서 바로 처리합니다.</span></p>
+      <span class="overline">How to Use</span>
+      <h2><span class="text-segment">이렇게 쓰면 </span><wbr><span class="text-segment">끝이에요</span></h2>
+      <p><span class="text-segment">단축키를 누르면 화면이 멈추고, </span><wbr><span class="text-segment">그 위에서 바로 고르고 표시합니다. </span><wbr><span class="text-segment">편집 창을 따로 열 필요가 없어요.</span></p>
     </div>
     <div class="mobile-carousel flow-carousel flow-carousel--contained" data-carousel="flow">
       <button class="carousel-arrow prev" type="button" aria-label="이전 단계">‹</button>
       <div class="flow-grid carousel-track">
       <div class="flow-item">
         <div class="step-media">
-          <iframe
-            class="flow-step-frame"
-            src="assets/mockups/EdgeShot_Flow_Step01_Select_Forest_v2.html"
-            title="EdgeShot 영역 선택 단계 예시"
-            loading="eager"
-            scrolling="no"
-          ></iframe>
+          <div class="demo demo-fl fl-1" aria-hidden="true"><span class="fl-sel"><span class="fl-size">1280 × 720</span></span><span class="fl-cur"></span></div>
         </div>
         <div class="step-text">
           <div class="step-no">STEP 01</div>
-          <h3>영역 선택</h3>
-          <p>창 위에 올리면 자동으로 잡히고, 드래그하면 원하는 영역만 선택됩니다.</p>
+          <h3>영역 고르기</h3>
+          <p>창 위에 올리면 자동으로 잡히고, 드래그하면 원하는 곳만. 여러 모니터를 가로질러도 됩니다.</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="step-media">
-          <iframe
-            class="flow-step-frame"
-            src="assets/mockups/EdgeShot_Flow_Step02_Resize_Forest_v2.html"
-            title="EdgeShot 선택 영역 조정 예시"
-            loading="eager"
-            scrolling="no"
-          ></iframe>
+          <div class="demo demo-fl fl-2" aria-hidden="true"><span class="fl-sel"><i class="h tl"></i><i class="h tm"></i><i class="h tr"></i><i class="h ml"></i><i class="h mr"></i><i class="h bl"></i><i class="h bm"></i><i class="h br"></i></span><span class="fl-cur"></span></div>
         </div>
-          <div class="step-text"><div class="step-no">STEP 02</div><h3>영역 조정</h3><p>8방향 핸들로 픽셀 단위까지 맞추고, 크기를 실시간으로 확인합니다.</p></div></div>
+          <div class="step-text"><div class="step-no">STEP 02</div><h3>크기 맞추기</h3><p>8방향 핸들로 영역을 넓히거나 줄이고, 크기를 실시간으로 확인합니다.</p></div></div>
       <div class="flow-item">
         <div class="step-media">
-          <iframe
-            class="flow-step-frame"
-            src="assets/mockups/EdgeShot_Flow_Step03_Annotate_Forest.html"
-            title="EdgeShot 주석 추가 단계 예시"
-            loading="eager"
-            scrolling="no"
-          ></iframe>
-      </div>
-      <div class="step-text"><div class="step-no">STEP 03</div><h3>주석 추가</h3><p>한 글자 단축키로 도구를 바꿔 가며 필요한 곳만 표시합니다.</p></div></div>
+          <div class="demo demo-fl fl-3" aria-hidden="true"><span class="fl-sel"><svg class="fl-arrow" viewBox="0 0 100 60" preserveAspectRatio="none"><path d="M18 14 L62 40"/><path class="hd" d="M52 40 L63 41 L59 30"/></svg><span class="fl-box"></span><span class="fl-txt">여기!</span><div class="fl-tb"><img src="assets/icons/select.svg" alt="" class="t-select"><img src="assets/icons/rectangle.svg" alt="" class="t-rectangle"><img src="assets/icons/circle.svg" alt="" class="t-circle"><img src="assets/icons/arrow.svg" alt="" class="t-arrow"><img src="assets/icons/pen.svg" alt="" class="t-pen"><img src="assets/icons/text.svg" alt="" class="t-text"><img src="assets/icons/mosaic.svg" alt="" class="t-mosaic"><img src="assets/icons/copy.svg" alt="" class="t-copy"><img src="assets/icons/save.svg" alt="" class="t-save"></div></span></div>
+        </div>
+      <div class="step-text"><div class="step-no">STEP 03</div><h3>표시하기</h3><p>화살표·사각형·글자·모자이크로 필요한 곳만 표시합니다. 도구는 한 글자 단축키로 바꿔요.</p></div></div>
       <div class="flow-item">
         <div class="step-media">
-          <iframe
-            class="flow-step-frame"
-            src="assets/mockups/EdgeShot_Flow_Step04_CopySave_Forest_v3.html"
-            title="EdgeShot 복사·저장 단계 예시"
-            loading="eager"
-            scrolling="no"
-          ></iframe>
+          <div class="demo demo-fl fl-4" aria-hidden="true"><span class="fl-sel"><span class="fl-box"></span><span class="fl-txt">여기!</span><div class="fl-tb"><img src="assets/icons/select.svg" alt="" class="t-select"><img src="assets/icons/rectangle.svg" alt="" class="t-rectangle"><img src="assets/icons/circle.svg" alt="" class="t-circle"><img src="assets/icons/arrow.svg" alt="" class="t-arrow"><img src="assets/icons/pen.svg" alt="" class="t-pen"><img src="assets/icons/text.svg" alt="" class="t-text"><img src="assets/icons/mosaic.svg" alt="" class="t-mosaic"><img src="assets/icons/copy.svg" alt="" class="t-copy"><img src="assets/icons/save.svg" alt="" class="t-save"></div><span class="fl-flash"></span></span><div class="fl-keys"><kbd>Ctrl</kbd><kbd>C</kbd></div><span class="fl-toast">✓ 클립보드에 복사 완료</span></div>
         </div>
-        <div class="step-text"><div class="step-no">STEP 04</div><h3>복사 · 저장</h3><p>클립보드나 PNG·JPG 파일로 바로 내보냅니다.</p></div></div>
+        <div class="step-text"><div class="step-no">STEP 04</div><h3>복사 · 저장</h3><p>Ctrl + C로 바로 붙여넣거나, Ctrl + S로 PNG·JPG 파일로 저장합니다.</p></div></div>
       </div>
       <button class="carousel-arrow next" type="button" aria-label="다음 단계">›</button>
     </div>
   </div>
 </section>
 
-<section class="section soft" id="annotation" data-title="Toolbar">
-  <div class="container grid12 tools-layout">
+<section class="section soft" id="tools" data-title="Shortcuts">
+  <div class="container grid12 options-layout">
     <div class="section-intro">
-      <span class="overline">Powerful, Yet Simple</span>
-      <h2><span class="text-segment">꼭 필요한 도구만, </span><wbr><span class="text-segment">손이 닿는 곳에</span></h2>
-      <p><span class="text-segment">복잡한 기능은 덜어내고 </span><wbr><span class="text-segment">자주 쓰는 주석 도구에만 집중했습니다. </span><wbr><span class="text-segment">모든 도구는 단축키로 </span><wbr><span class="text-segment">바로 바꿀 수 있습니다.</span></p>
+      <span class="overline">Tools &amp; Shortcuts</span>
+      <h2><span class="text-segment">도구는 </span><wbr><span class="text-segment">글자 하나로 바꿔요</span></h2>
+      <p><span class="text-segment">툴바를 누르지 않아도 </span><wbr><span class="text-segment">키 하나로 도구가 바뀝니다. </span><wbr><span class="text-segment">손에 익으면 툴바까지 손이 갈 일이 줄어요.</span></p>
     </div>
-    <div class="tools-wrap">
-      <div class="toolbar-scroll">
-        <ol class="toolbar-demo" aria-label="EdgeShot 툴바와 단축키">
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/select.svg" alt=""></span><span class="tb-label">선택</span><kbd class="tb-key">V</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/rectangle.svg" alt=""></span><span class="tb-label">사각형</span><kbd class="tb-key">R</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/circle.svg" alt=""></span><span class="tb-label">원</span><kbd class="tb-key">O</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/arrow.svg" alt=""></span><span class="tb-label">화살표</span><kbd class="tb-key">A</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/pen.svg" alt=""></span><span class="tb-label">펜</span><kbd class="tb-key">P</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/text.svg" alt=""></span><span class="tb-label">텍스트</span><kbd class="tb-key">T</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/mosaic.svg" alt=""></span><span class="tb-label">모자이크</span><kbd class="tb-key">B</kbd></li>
-          <li class="tb-item tb-item--history"><span class="tb-icon"><img src="assets/icons/undo.svg" alt=""></span><span class="tb-label">실행취소</span><kbd class="tb-key">Ctrl+Z</kbd></li>
-          <li class="tb-item tb-item--history"><span class="tb-icon"><img src="assets/icons/redo.svg" alt=""></span><span class="tb-label">다시실행</span><kbd class="tb-key">Ctrl+Y</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/copy.svg" alt=""></span><span class="tb-label">복사</span><kbd class="tb-key">Ctrl+C</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/save.svg" alt=""></span><span class="tb-label">저장</span><kbd class="tb-key">Ctrl+S</kbd></li>
-          <li class="tb-item"><span class="tb-icon"><img src="assets/icons/close.svg" alt=""></span><span class="tb-label">닫기</span><kbd class="tb-key">Esc</kbd></li>
-        </ol>
-      </div>
+    <div class="options-wrap shortcut-sheet">
+        <div class="tools-wrap">
+          <div class="toolbar-scroll">
+            <ol class="toolbar-demo" aria-label="EdgeShot 툴바와 단축키">
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-t">이동 · 크기 조절</span></span><span class="tb-icon"><img src="assets/icons/select.svg" alt=""></span><span class="tb-label">선택</span><kbd class="tb-key">V</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-c" style="--c:#E5484D"></span><span class="o-c" style="--c:#0078D4"></span><span class="o-c" style="--c:#FFB900"></span><span class="o-c" style="--c:#107C41"></span><span class="o-c" style="--c:#1E1E1E"></span><span class="o-c" style="--c:#fff"></span><span class="o-sep"></span><span class="o-w w1"></span><span class="o-w w2"></span><span class="o-w w3"></span></span><span class="tb-icon"><img src="assets/icons/rectangle.svg" alt=""></span><span class="tb-label">사각형</span><kbd class="tb-key">R</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-c" style="--c:#E5484D"></span><span class="o-c" style="--c:#0078D4"></span><span class="o-c" style="--c:#FFB900"></span><span class="o-c" style="--c:#107C41"></span><span class="o-c" style="--c:#1E1E1E"></span><span class="o-c" style="--c:#fff"></span><span class="o-sep"></span><span class="o-w w1"></span><span class="o-w w2"></span><span class="o-w w3"></span></span><span class="tb-icon"><img src="assets/icons/circle.svg" alt=""></span><span class="tb-label">원</span><kbd class="tb-key">O</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-c" style="--c:#E5484D"></span><span class="o-c" style="--c:#0078D4"></span><span class="o-c" style="--c:#FFB900"></span><span class="o-c" style="--c:#107C41"></span><span class="o-c" style="--c:#1E1E1E"></span><span class="o-c" style="--c:#fff"></span><span class="o-sep"></span><span class="o-w w1"></span><span class="o-w w2"></span><span class="o-w w3"></span></span><span class="tb-icon"><img src="assets/icons/arrow.svg" alt=""></span><span class="tb-label">화살표</span><kbd class="tb-key">A</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-c" style="--c:#E5484D"></span><span class="o-c" style="--c:#0078D4"></span><span class="o-c" style="--c:#FFB900"></span><span class="o-c" style="--c:#107C41"></span><span class="o-c" style="--c:#1E1E1E"></span><span class="o-c" style="--c:#fff"></span><span class="o-sep"></span><span class="o-w w1"></span><span class="o-w w2"></span><span class="o-w w3"></span></span><span class="tb-icon"><img src="assets/icons/pen.svg" alt=""></span><span class="tb-label">펜</span><kbd class="tb-key">P</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-c" style="--c:#E5484D"></span><span class="o-c" style="--c:#0078D4"></span><span class="o-c" style="--c:#FFB900"></span><span class="o-c" style="--c:#107C41"></span><span class="o-c" style="--c:#1E1E1E"></span><span class="o-c" style="--c:#fff"></span><span class="o-sep"></span><span class="o-t s1">가</span><span class="o-t s2">가</span><span class="o-t s3">가</span></span><span class="tb-icon"><img src="assets/icons/text.svg" alt=""></span><span class="tb-label">텍스트</span><kbd class="tb-key">T</kbd></li>
+              <li class="tb-item tb-tool"><span class="tb-opts" aria-hidden="true"><span class="o-t">약</span><span class="o-t on">중</span><span class="o-t">강</span></span><span class="tb-icon"><img src="assets/icons/mosaic.svg" alt=""></span><span class="tb-label">모자이크</span><kbd class="tb-key">B</kbd></li>
+              <li class="tb-item tb-item--history"><span class="tb-icon"><img src="assets/icons/undo.svg" alt=""></span><span class="tb-label">실행취소</span><kbd class="tb-key">Ctrl+Z</kbd></li>
+              <li class="tb-item tb-item--history"><span class="tb-icon"><img src="assets/icons/redo.svg" alt=""></span><span class="tb-label">다시실행</span><kbd class="tb-key">Ctrl+Y</kbd></li>
+              <li class="tb-item"><span class="tb-icon"><img src="assets/icons/copy.svg" alt=""></span><span class="tb-label">복사</span><kbd class="tb-key">Ctrl+C</kbd></li>
+              <li class="tb-item"><span class="tb-icon"><img src="assets/icons/save.svg" alt=""></span><span class="tb-label">저장</span><kbd class="tb-key">Ctrl+S</kbd></li>
+              <li class="tb-item"><span class="tb-icon"><img src="assets/icons/close.svg" alt=""></span><span class="tb-label">닫기</span><kbd class="tb-key">Esc</kbd></li>
+            </ol>
+          </div>
+        </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="options" data-title="Options">
+<section class="section" id="edit" data-title="Edit After">
   <div class="container grid12 options-layout">
     <div class="section-intro">
-      <span class="overline">Annotation Options</span>
-      <h2><span class="text-segment">색과 굵기, 글자 크기까지 </span><wbr><span class="text-segment">그 자리에서</span></h2>
-      <p><span class="text-segment">도구를 고르면 툴바 위에 옵션이 바로 열립니다. </span><wbr><span class="text-segment">이미 그린 주석도 선택(V)하면 </span><wbr><span class="text-segment">옆에 속성 패널이 나타나 </span><wbr><span class="text-segment">다시 바꿀 수 있습니다.</span></p>
+      <span class="overline">New in v0.1.1</span>
+      <h2><span class="text-segment">그린 뒤에도 </span><wbr><span class="text-segment">고칠 수 있어요</span></h2>
+      <p><span class="text-segment">선택 도구(V)로 이미 그린 표시를 누르면 </span><wbr><span class="text-segment">크기와 위치, 색을 다시 바꿀 수 있습니다. </span><wbr><span class="text-segment">실수해도 다시 찍을 필요가 없어요.</span></p>
     </div>
     <div class="options-wrap">
       <div class="tool-props">
-        <div class="tool-prop">
-          <div class="tool-prop__visual" aria-hidden="true">
-            <span class="swatch" style="--swatch:var(--color-annotation-red)"></span>
-            <span class="swatch" style="--swatch:var(--color-annotation-blue)"></span>
-            <span class="swatch" style="--swatch:var(--color-annotation-yellow)"></span>
-            <span class="swatch" style="--swatch:var(--color-annotation-green)"></span>
-            <span class="swatch" style="--swatch:var(--color-annotation-black)"></span>
-            <span class="swatch" style="--swatch:var(--color-neutral-white)"></span>
+        <div class="tool-prop demo-card">
+          <div class="demo demo-ed-resize" aria-hidden="true">
+            <span class="dm-shape"><i class="h tl"></i><i class="h tr"></i><i class="h bl"></i><i class="h br"></i></span>
+            <span class="dm-cursor"></span>
+            <kbd class="dm-key">V</kbd>
           </div>
-          <strong>6가지 색상</strong><span>빨강 · 파랑 · 노랑 · 초록 · 검정 · 흰색</span>
+          <strong>크기 조절</strong><span>사각형 · 원 · 펜 · 모자이크를 모서리 핸들로 늘리고 줄이기</span>
         </div>
-        <div class="tool-prop">
-          <div class="tool-prop__visual" aria-hidden="true">
-            <span class="stroke-sample" style="--stroke:1px"></span>
-            <span class="stroke-sample" style="--stroke:2px"></span>
-            <span class="stroke-sample" style="--stroke:4px"></span>
+        <div class="tool-prop demo-card">
+          <div class="demo demo-ed-arrow" aria-hidden="true">
+            <svg viewBox="0 0 200 110"><g class="dm-arrow-g"><line x1="40" y1="80" x2="150" y2="40"/><path d="M136 36 L151 40 L141 52"/><circle class="dm-h" cx="40" cy="80" r="4"/><circle class="dm-h end" cx="150" cy="40" r="4"/></g><rect class="dm-target" x="150" y="60" width="34" height="22" rx="4"/></svg>
           </div>
-          <strong>3단계 선 굵기</strong><span>얇게 · 보통 · 굵게 (1 · 2 · 4px)</span>
+          <strong>화살표 끝점 이동</strong><span>시작점과 끝점을 따로 옮겨 방향을 바로잡기</span>
         </div>
-        <div class="tool-prop">
-          <div class="tool-prop__visual" aria-hidden="true">
-            <span class="font-sample" style="font-size:12px">가</span>
-            <span class="font-sample" style="font-size:16px">가</span>
-            <span class="font-sample" style="font-size:24px">가</span>
+        <div class="tool-prop demo-card">
+          <div class="demo demo-ed-style" aria-hidden="true">
+            <span class="dm-shape"></span>
+            <div class="dm-swatches"><i style="--c:var(--color-annotation-red)"></i><i style="--c:var(--color-annotation-blue)"></i><i style="--c:var(--color-annotation-yellow)"></i><i style="--c:var(--color-annotation-green)"></i><i style="--c:var(--color-annotation-black)"></i><i style="--c:var(--color-neutral-white)"></i><b class="dm-ring"></b></div>
+            <span class="dm-chip">다음 캡처에도 파란색</span>
           </div>
-          <strong>3단계 글자 크기</strong><span>작게 · 보통 · 크게 (12 · 16 · 24px)</span>
+          <strong>마지막 스타일 기억</strong><span>6가지 색 · 3단계 굵기 · 3단계 글자 크기 중 고른 값을 다음 캡처에도 그대로</span>
         </div>
-        <div class="tool-prop">
-          <div class="tool-prop__visual" aria-hidden="true">
-            <span class="edit-sample"></span>
-            <kbd class="tb-key">V</kbd>
+        <div class="tool-prop demo-card">
+          <div class="demo demo-ed-undo" aria-hidden="true">
+            <span class="dm-s s1"></span><span class="dm-s s2"></span><span class="dm-s s3"></span>
+            <div class="dm-keys"><kbd class="k-z">Ctrl+Z</kbd><kbd class="k-y">Ctrl+Y</kbd></div>
           </div>
-          <strong>그린 뒤에도 수정</strong><span>선택한 주석 옆 속성 패널에서 변경</span>
+          <strong>되돌리기 · 다시 하기</strong><span>Esc는 방금 한 동작부터 한 단계씩 취소</span>
         </div>
       </div>
+      <p class="demo-disclaimer">예시 화면은 실제 앱 동작을 재현한 애니메이션이에요.</p>
     </div>
   </div>
 </section>
@@ -279,14 +253,14 @@
 <section class="section soft" id="privacy" data-title="Mosaic">
   <div class="container split">
     <div class="split-copy">
-      <span class="overline">Built for Real Work</span>
-      <h2><span class="text-segment">민감한 정보도, </span><wbr><span class="text-segment">안전하게</span></h2>
-      <p class="lead"><span class="text-segment">계정 정보나 업무 문서를 공유할 때도 </span><wbr><span class="text-segment">걱정 없습니다. </span><wbr><span class="text-segment">가릴 부분만 모자이크로 덮고 보내세요.</span></p>
+      <span class="overline">Hide Before You Share</span>
+      <h2><span class="text-segment">보내기 전에, </span><wbr><span class="text-segment">가릴 곳은 가리고</span></h2>
+      <p class="lead"><span class="text-segment">계정 정보나 업무 문서를 공유할 때 </span><wbr><span class="text-segment">가릴 부분만 모자이크로 덮고 보내세요.</span></p>
       <svg class="point-num-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><clipPath id="pointNumCutTop" clipPathUnits="userSpaceOnUse"><polygon points="-10,-10 70,-10 70,8.6 -10,75.8"/></clipPath><clipPath id="pointNumCutTop1" clipPathUnits="userSpaceOnUse"><polygon points="-10,-10 70,-10 70,16.2 -10,83.4"/></clipPath><clipPath id="pointNumCutTop2" clipPathUnits="userSpaceOnUse"><polygon points="-10,-10 70,-10 70,21.5 -10,88.7"/></clipPath></defs></svg>
       <ol class="point-list">
-        <li><span class="point-list__no" aria-label="1"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop1)"><path transform="translate(11.5 0) skewX(-14)" d="M23.58 58V10.43L29.32 15.68H12.15V6H36.85V58Z"/></g></svg></span><div><strong>드래그 한 번으로 가리기</strong><span class="point-list__desc">모자이크 도구(B)로 민감 정보 가리기</span></div></li>
-        <li><span class="point-list__no" aria-label="2"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop2)"><path transform="translate(8 0) skewX(-8)" d="M4.14 58V50.23L26.25 31.28Q28.8 29.08 30.06 27.39Q31.32 25.7 31.74 24.29Q32.17 22.89 32.17 21.64Q32.17 18.59 29.87 16.88Q27.57 15.18 23.06 15.18Q19.4 15.18 16.34 16.47Q13.29 17.76 11.19 20.41L1.58 14.78Q4.83 10.33 10.7 7.73Q16.56 5.13 24.27 5.13Q30.66 5.13 35.44 7Q40.23 8.87 42.87 12.31Q45.52 15.74 45.52 20.45Q45.52 22.98 44.8 25.48Q44.08 27.98 42.01 30.75Q39.93 33.51 35.91 36.93L17.63 52.56L15.14 48.17H47.42V58Z"/></g></svg></span><div><strong>가린 뒤에도 옮기기</strong><span class="point-list__desc">선택 도구로 모자이크 위치 조정</span></div></li>
-        <li><span class="point-list__no" aria-label="3"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop)"><path transform="translate(8 0) skewX(-8)" d="M23.54 58.87Q17.56 58.87 11.71 57.42Q5.86 55.96 1.73 53.3L6.88 44.09Q10.17 46.29 14.48 47.56Q18.8 48.82 23.23 48.82Q28.18 48.82 31.05 47.04Q33.92 45.25 33.92 42.12Q33.92 39.16 31.38 37.42Q28.84 35.69 23.2 35.69H17.22V27.78L33.1 11.34L34.62 15.68H4.57V6H44.66V13.77L28.79 30.22L22.12 26.72H25.9Q36.49 26.72 41.88 31.03Q47.27 35.35 47.27 42.08Q47.27 46.49 44.73 50.33Q42.19 54.17 36.95 56.52Q31.71 58.87 23.54 58.87Z"/></g></svg></span><div><strong>설명까지 함께</strong><span class="point-list__desc">모자이크 위에 주석 달기</span></div></li>
+        <li><span class="point-list__no" aria-label="1"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop1)"><path transform="translate(11.5 0) skewX(-14)" d="M23.58 58V10.43L29.32 15.68H12.15V6H36.85V58Z"/></g></svg></span><div><strong>드래그 한 번으로 가리기</strong><span class="point-list__desc">모자이크 도구(B), 강도는 약 · 중 · 강 3단계</span></div></li>
+        <li><span class="point-list__no" aria-label="2"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop2)"><path transform="translate(8 0) skewX(-8)" d="M4.14 58V50.23L26.25 31.28Q28.8 29.08 30.06 27.39Q31.32 25.7 31.74 24.29Q32.17 22.89 32.17 21.64Q32.17 18.59 29.87 16.88Q27.57 15.18 23.06 15.18Q19.4 15.18 16.34 16.47Q13.29 17.76 11.19 20.41L1.58 14.78Q4.83 10.33 10.7 7.73Q16.56 5.13 24.27 5.13Q30.66 5.13 35.44 7Q40.23 8.87 42.87 12.31Q45.52 15.74 45.52 20.45Q45.52 22.98 44.8 25.48Q44.08 27.98 42.01 30.75Q39.93 33.51 35.91 36.93L17.63 52.56L15.14 48.17H47.42V58Z"/></g></svg></span><div><strong>가린 뒤에도 옮기고 크기 조절</strong><span class="point-list__desc">선택 도구(V)로 모자이크를 다시 맞추기</span></div></li>
+        <li><span class="point-list__no" aria-label="3"><svg class="point-num" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><g class="point-num__piece point-num__piece--top" clip-path="url(#pointNumCutTop)"><path transform="translate(8 0) skewX(-8)" d="M23.54 58.87Q17.56 58.87 11.71 57.42Q5.86 55.96 1.73 53.3L6.88 44.09Q10.17 46.29 14.48 47.56Q18.8 48.82 23.23 48.82Q28.18 48.82 31.05 47.04Q33.92 45.25 33.92 42.12Q33.92 39.16 31.38 37.42Q28.84 35.69 23.2 35.69H17.22V27.78L33.1 11.34L34.62 15.68H4.57V6H44.66V13.77L28.79 30.22L22.12 26.72H25.9Q36.49 26.72 41.88 31.03Q47.27 35.35 47.27 42.08Q47.27 46.49 44.73 50.33Q42.19 54.17 36.95 56.52Q31.71 58.87 23.54 58.87Z"/></g></svg></span><div><strong>설명까지 함께</strong><span class="point-list__desc">모자이크 위에 화살표와 글자 달기</span></div></li>
       </ol>
     </div>
     <div class="split-media">
@@ -319,82 +293,126 @@
   </div>
 </section>
 
-<section class="section section--inverse" id="local" data-title="Local Only">
-  <div class="container local-layout">
-    <div class="local-copy">
-      <span class="overline">Privacy by Design</span>
-      <h2><span class="text-segment">당신의 화면은 </span><wbr><span class="text-segment">당신의 PC에만 남습니다</span></h2>
-      <p class="lead"><span class="text-segment">EdgeShot은 오직 로컬에서만 동작합니다. </span><wbr><span class="text-segment">캡처한 이미지는 메모리에서만 처리하고, </span><wbr><span class="text-segment">네트워크로 보내거나 </span><wbr><span class="text-segment">임시 파일로 남기지 않습니다.</span></p>
-    </div>
-    <ul class="none-grid">
-      <li class="none-tile"><img src="assets/icons/no_network.svg" alt=""><strong>네트워크 연결 없음</strong><span>NONE</span></li>
-      <li class="none-tile"><img src="assets/icons/no_cloud.svg" alt=""><strong>클라우드 업로드 없음</strong><span>NONE</span></li>
-      <li class="none-tile"><img src="assets/icons/no_temp_file.svg" alt=""><strong>임시 파일 저장 없음</strong><span>NONE</span></li>
-      <li class="none-tile"><img src="assets/icons/no_data_collection.svg" alt=""><strong>사용 데이터 수집 없음</strong><span>NONE</span></li>
-      <li class="none-tile"><img src="assets/icons/no_external_service.svg" alt=""><strong>외부 서비스 연동 없음</strong><span>NONE</span></li>
-      <li class="none-tile"><img src="assets/icons/no_account.svg" alt=""><strong>로그인 · 계정 없음</strong><span>NONE</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="section soft" id="features" data-title="Details">
+<section class="section" id="settings" data-title="Settings">
   <div class="container grid12 features-layout">
     <div class="section-intro">
-      <span class="overline">Small Details</span>
-      <h2><span class="text-segment">매일 쓰는 도구라서, </span><wbr><span class="text-segment">작은 부분까지</span></h2>
-      <p><span class="text-segment">한 번 쓰고 끝나는 기능보다, </span><wbr><span class="text-segment">매일 손에 닿는 순간들을 다듬었습니다.</span></p>
+      <span class="overline">Settings</span>
+      <h2><span class="text-segment">내 방식대로 </span><wbr><span class="text-segment">맞추기</span></h2>
+      <p><span class="text-segment">작업 표시줄의 EdgeShot 아이콘을 </span><wbr><span class="text-segment">오른쪽 클릭해 </span><wbr><span class="text-segment">설정을 여세요.</span></p>
     </div>
     <div class="feature-wrap">
-      <div class="feature-cards feature-cards--centered">
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/area_selection.svg" alt=""><strong>Smart Snap</strong><span>창은 자동 감지, 화면 맨 아래에 올리면 전체 화면</span></div></div>
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/windows.svg" alt=""><strong>Multi Monitor</strong><span>여러 모니터를 가로질러 한 번에 캡처</span></div></div>
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/text.svg" alt=""><strong>Text Reflow</strong><span>텍스트 박스 너비에 맞춰 자동 줄바꿈</span></div></div>
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/undo.svg" alt=""><strong>Undo / Redo</strong><span>Ctrl + Z / Ctrl + Y로 언제든 되돌리기</span></div></div>
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/close.svg" alt=""><strong>Step-by-step Esc</strong><span>방금 한 동작부터 한 단계씩 취소</span></div></div>
-        <div class="feature-card"><div><img class="feature-card__icon" src="assets/icons/checkmark.svg" alt=""><strong>Clean Output</strong><span>툴바와 핸들은 빼고 결과물만 깨끗하게</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="story" data-title="Story">
-  <div class="container story">
-    <div>
-      <span class="overline">Development Story</span>
-      <h2><span class="text-segment">쓰다 보니 불편해서, </span><wbr><span class="text-segment">직접 만들었습니다</span></h2>
-      <p class="lead"><span class="text-segment">캡처는 매일 하는데, </span><wbr><span class="text-segment">표시 하나 넣으려면 </span><wbr><span class="text-segment">매번 다른 프로그램을 열어야 했습니다. </span><wbr><span class="text-segment">그 번거로움을 덜기 위해, </span><wbr><span class="text-segment">제가 쓰기 편한 캡처 도구를 </span><wbr><span class="text-segment">직접 설계하고 만들었습니다.</span></p>
-      <div class="actions">
-        <a class="btn feature-cta" href="https://isla-makes.tistory.com" target="_blank" rel="noopener noreferrer">
-          <span>개발 기록 블로그 보기</span>
-          <span aria-hidden="true"><img src="assets/icons/downside.svg" alt="" aria-hidden="true" style="transform:rotate(-90deg)"></span>
-        </a>
-      </div>
-    </div>
-    <div class="story-panel">
-      <div class="code-panel">
-        <figure class="story-quote">
-          <p>“제가 매일 쓰는 도구라서, 쓰는 순간의 작은 불편부터 하나씩 덜어냈습니다.”</p>
-          <figcaption class="story-author"><strong>ISLA</strong><span>Designer &amp; Developer</span></figcaption>
-        </figure>
-        <div class="story-milestones">
-          <h3 class="overline">Milestones</h3>
-          <div class="timeline">
-            <div><b>01</b><span><strong>Capture Core</strong>단축키 · 화면 고정 · 영역 선택</span></div>
-            <div><b>02</b><span><strong>Smart Capture</strong>창 · 전체 화면 자동 감지</span></div>
-            <div><b>03</b><span><strong>Annotation</strong>주석 6종과 속성 시스템</span></div>
-            <div><b>04</b><span><strong>v0.1.0</strong>안정화 · Microsoft Store 출시</span></div>
+      <div class="feature-cards demo-cards">
+        <div class="feature-card demo-card">
+          <div class="demo demo-st-hotkey" aria-hidden="true">
+            <div class="dm-field"><span>캡처 단축키</span><div class="dm-roll"><b>Alt + Shift + S</b><b>Ctrl + Shift + S</b><b>PrintScreen</b><b>Alt + Shift + S</b></div></div>
           </div>
+          <div><strong>단축키 바꾸기</strong><span>Alt+Shift+S, Ctrl+Shift+S, Ctrl+Alt+S, PrintScreen 중 고르거나 직접 지정</span></div>
+        </div>
+        <div class="feature-card demo-card">
+          <div class="demo demo-st-save" aria-hidden="true">
+            <span class="dm-folder"></span><span class="dm-file"></span>
+            <div class="dm-seg"><b>PNG</b><b>JPG</b><i></i></div>
+          </div>
+          <div><strong>저장 폴더 · 형식</strong><span>Ctrl + S로 저장할 기본 폴더와 PNG / JPG 선택</span></div>
+        </div>
+        <div class="feature-card demo-card">
+          <div class="demo demo-st-startup" aria-hidden="true">
+            <div class="dm-field"><span>Windows 시작 시 실행</span><span class="dm-switch"></span></div>
+          </div>
+          <div><strong>Windows 시작 시 실행</strong><span>켜 두면 부팅 후 바로 사용 (기본은 꺼짐)</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section section--inverse" id="local" data-title="Local Only">
+  <div class="container local-layout">
+    <div class="local-copy">
+      <span class="overline">Privacy by Design</span>
+      <h2><span class="text-segment">당신의 화면은 </span><wbr><span class="text-segment">당신의 PC에만 남습니다</span></h2>
+      <p class="lead"><span class="text-segment">EdgeShot은 오직 로컬에서만 동작합니다. </span><wbr><span class="text-segment">캡처한 이미지는 메모리에서만 처리하고, </span><wbr><span class="text-segment">네트워크로 보내거나 </span><wbr><span class="text-segment">임시 파일로 남기지 않습니다. </span><wbr><span class="text-segment">PC에 남기는 건 설정 파일 하나뿐이에요.</span></p>
+    </div>
+    <div class="local-visual">
+      <svg class="local-map" viewBox="0 0 520 290" role="img" aria-label="캡처 이미지는 내 PC 안의 메모리에서만 처리되고 클립보드나 내 폴더로만 이동하며, 인터넷이나 클라우드로는 보내지 않는다는 흐름도">
+        <rect class="lm-pc" x="12" y="16" width="372" height="258" rx="18"/>
+        <text class="lm-pc-label" x="32" y="44">내 PC</text>
+        <path id="lmA" class="lm-path" d="M118 104 L178 150"/>
+        <path id="lmB" class="lm-path" d="M268 140 L294 98"/>
+        <path id="lmC" class="lm-path" d="M268 160 L294 206"/>
+        <path class="lm-out" d="M270 150 L470 150"/>
+        <circle class="lm-dot d1" r="4"/><circle class="lm-dot d2" r="4"/><circle class="lm-dot d3" r="4"/><circle class="lm-dot lm-bounce" r="4"/>
+        <g class="lm-node"><rect x="32" y="70" width="96" height="44" rx="10"/><text x="80" y="97">화면 캡처</text></g>
+        <g class="lm-node lm-core"><rect x="166" y="124" width="112" height="52" rx="12"/><text x="222" y="146">EdgeShot</text><text class="lm-sub" x="222" y="164">메모리에서 처리</text></g>
+        <g class="lm-node"><rect x="282" y="66" width="90" height="44" rx="10"/><text x="327" y="93">클립보드</text></g>
+        <g class="lm-node"><rect x="282" y="190" width="90" height="44" rx="10"/><text x="327" y="217">내 폴더</text></g>
+        <g class="lm-block"><circle cx="384" cy="150" r="13"/><path d="M378 144 L390 156 M390 144 L378 156"/></g>
+        <g class="lm-cloud"><path d="M436 166 h60 a16 16 0 0 0 -4 -31 a22 22 0 0 0 -42 -4 a15 15 0 0 0 -14 35z"/><text x="466" y="192">인터넷</text><text class="lm-sub" x="466" y="210">보내지 않아요</text></g>
+      </svg>
+      <ul class="none-list"><li><img src="assets/icons/no_network.svg" alt=""><span>네트워크 연결 없음</span></li><li><img src="assets/icons/no_cloud.svg" alt=""><span>클라우드 업로드 없음</span></li><li><img src="assets/icons/no_temp_file.svg" alt=""><span>임시 파일 저장 없음</span></li><li><img src="assets/icons/no_data_collection.svg" alt=""><span>사용 데이터 수집 없음</span></li><li><img src="assets/icons/no_external_service.svg" alt=""><span>외부 서비스 연동 없음</span></li><li><img src="assets/icons/no_account.svg" alt=""><span>로그인 · 계정 없음</span></li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="start" data-title="Get Started">
+  <div class="container grid12 features-layout">
+    <div class="section-intro">
+      <span class="overline">Getting Started</span>
+      <h2><span class="text-segment">설치하고 </span><wbr><span class="text-segment">바로 시작하기</span></h2>
+      <p><span class="text-segment">EdgeShot은 창 없이 </span><wbr><span class="text-segment">작업 표시줄에서 기다리다가, </span><wbr><span class="text-segment">단축키를 누르면 나타납니다.</span></p>
+    </div>
+    <div class="feature-wrap">
+      <ol class="feature-cards demo-cards start-steps">
+        <li class="feature-card demo-card">
+          <div class="demo demo-sg-store" aria-hidden="true">
+            <svg class="dm-store" viewBox="0 0 48 48"><path class="bag" d="M8 14h32l-2 28H10z"/><path class="handle" d="M17 14v-3a7 7 0 0 1 14 0v3"/><rect x="16" y="21" width="7" height="7" fill="#F25022"/><rect x="25" y="21" width="7" height="7" fill="#7FBA00"/><rect x="16" y="30" width="7" height="7" fill="#00A4EF"/><rect x="25" y="30" width="7" height="7" fill="#FFB900"/></svg>
+            <div class="dm-install"><span class="dm-label">EdgeShot</span><span class="dm-progress"><i></i></span><span class="dm-done">설치됨 ✓</span></div>
+          </div>
+          <div><span class="step-no">STEP 01</span><strong>Microsoft Store에서 설치</strong><span>무료 · Windows 10 / 11 (64-bit)</span></div>
+        </li>
+        <li class="feature-card demo-card">
+          <div class="demo demo-sg-tray" aria-hidden="true">
+            <span class="dm-tip">EdgeShot · Alt+Shift+S</span>
+            <div class="dm-taskbar"><i class="dm-up">⌃</i><img class="dm-tray-icon" src="assets/icons/EdgeShot_favicon.svg" alt=""><i class="dm-ti"></i><i class="dm-ti"></i><span class="dm-clock">오후 2:30</span></div>
+          </div>
+          <div><span class="step-no">STEP 02</span><strong>작업 표시줄 아이콘 확인</strong><span>아이콘이 비활성 표시라면 단축키가 다른 앱과 겹친 상태예요. 설정에서 바꿔 주세요.</span></div>
+        </li>
+        <li class="feature-card demo-card">
+          <div class="demo demo-sg-capture" aria-hidden="true">
+            <div class="dm-win"><i class="dm-bar"></i><i class="dm-line w70"></i><i class="dm-line w50"></i><i class="dm-line w60"></i></div>
+            <span class="dm-dim"></span><span class="dm-sel"></span>
+            <div class="dm-keys"><kbd class="k1">Alt</kbd><kbd class="k2">Shift</kbd><kbd class="k3">S</kbd></div>
+          </div>
+          <div><span class="step-no">STEP 03</span><strong>단축키로 첫 캡처</strong><span>기본 Alt + Shift + S</span></div>
+        </li>
+      </ol>
+      <p class="demo-disclaimer">예시 화면은 실제 앱 동작을 재현한 애니메이션이에요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="faq" data-title="FAQ">
+  <div class="container faq-layout">
+    <div class="section-intro">
+      <span class="overline">FAQ</span>
+      <h2><span class="text-segment">자주 묻는 질문</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>무료인가요?</summary><p>네. Microsoft Store에서 무료로 받을 수 있어요.</p></details>
+      <details class="faq-item"><summary>인터넷 연결이 필요한가요?</summary><p>아니요. 캡처와 편집은 모두 PC 안에서 처리되고, 네트워크를 쓰지 않아요.</p></details>
+      <details class="faq-item"><summary>단축키를 눌러도 반응이 없어요.</summary><p>다른 앱이 같은 단축키를 쓰고 있을 수 있어요. 작업 표시줄의 EdgeShot 아이콘이 비활성으로 표시되면, 아이콘을 오른쪽 클릭해 설정에서 다른 단축키로 바꿔 주세요.</p></details>
+      <details class="faq-item"><summary>캡처한 이미지는 어디에 저장되나요?</summary><p>Ctrl + C는 클립보드에 복사하고, Ctrl + S는 설정에서 고른 기본 폴더에 PNG 또는 JPG로 저장해요.</p></details>
+      <details class="faq-item"><summary>어떤 Windows에서 쓸 수 있나요?</summary><p>Windows 10과 11 (64-bit)에서 쓸 수 있어요.</p></details>
+      <details class="faq-item"><summary>업데이트는 어떻게 받나요?</summary><p>Microsoft Store를 통해 업데이트돼요.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="last" id="cta" data-title="Download">
   <div class="container cta">
-    <span class="overline">Available Now</span>
-    <h2><span class="text-segment">더 편한 캡처, </span><wbr><span class="text-segment">지금 시작하세요</span></h2>
-    <p><span class="text-segment">EdgeShot을 Microsoft Store에서 </span><wbr><span class="text-segment">지금 설치할 수 있습니다. </span><wbr><span class="text-segment">선택하고, 표시하고, 복사하는 흐름을 </span><wbr><span class="text-segment">한 화면에서 시작하세요.</span></p>
+    <span class="overline">Available Now · v0.1.1</span>
+    <h2><span class="text-segment">찍고, 표시하고, 가리기까지 </span><wbr><span class="text-segment">한 화면에서 끝내세요</span></h2>
+    <p><span class="text-segment">Microsoft Store에서 무료로 받을 수 있어요. </span><wbr><span class="text-segment">광고도, 계정도 없습니다.</span></p>
     <div class="actions">
       <a class="btn primary download-cta" href="https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&amp;gl=KR&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer" data-store-link>
         <img src="assets/icons/download_2.svg" alt="" aria-hidden="true">
@@ -403,9 +421,13 @@
     </div>
     <div class="cta-meta"><span>Windows 10 / 11 (64-bit)</span><span>Microsoft Store</span><span>무료</span></div>
   </div>
+
   <footer class="container footer">
     <div class="footer-brand"><strong><img class="brand__mark" src="assets/icons/EdgeShot_logo_mark.svg" alt=""><span><b>Edge</b>Shot</span></strong><span>Capture · Annotate · Share</span></div>
-    <nav class="footer-links" aria-label="관련 링크"><a href="design-guide/index.html">디자인 가이드</a><a href="https://github.com/isla2102" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#">Notion</a><a href="https://isla-makes.tistory.com" target="_blank" rel="noopener noreferrer">Tistory</a></nav>
+    <nav class="footer-links" aria-label="관련 링크">
+      <div class="footer-group"><span class="footer-group__title">프로젝트</span><a href="devlog/index.html">만든 과정</a><a href="design-guide/index.html">디자인 가이드</a></div>
+      <div class="footer-group"><span class="footer-group__title">바로가기</span><a href="https://apps.microsoft.com/detail/9P9DZPR27K25?hl=ko&amp;gl=KR&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Microsoft Store</a><a href="https://github.com/isla2102" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://isla-makes.tistory.com" target="_blank" rel="noopener noreferrer">Tistory</a></div>
+    </nav>
     <div class="footer-credit"><span>Designed &amp; Developed by ISLA</span><span>© 2026 ISLA MAKES. All rights reserved.</span></div>
   </footer>
 </section>

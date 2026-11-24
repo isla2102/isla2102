@@ -76,3 +76,22 @@ td.dl-blank{border-radius:0;border-width:0 0 1px;border-style:solid;border-color
 @media (max-width:640px){.dl-top nav{display:none}.dl-grid3,.dl-grid2,.dl-facts,.dl-metrics{grid-template-columns:1fr}.dl-adr article{grid-template-columns:1fr}.dl-adr article>*,.dl-adr .dl-tag{grid-column:1;grid-row:auto}.dl-adr .dl-tag{margin-bottom:10px}.dl-adr dl{grid-template-columns:1fr}.dl-time li{grid-template-columns:1fr;gap:6px}.dl-sec{padding:56px 0}.dl-hero{padding:56px 0 40px}.dl-foot{flex-direction:column;gap:4px}}
 .dl-hero h1,.dl-sec h2,.dl-end h2{font-weight:800}
 .dl h3{font-weight:700}
+.dl-sub{font-size:1.25rem!important;font-weight:800;margin:40px 0 16px!important}
+.dl-sec__head+.dl-sub{margin-top:0!important}
+.dl-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.dl-steps li{border:1px solid var(--border-supporting);border-radius:var(--radius-card);padding:22px;position:relative}
+.dl-steps li span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--color-brand-primary);color:#fff;font-weight:800;font-size:.875rem;margin-bottom:12px}
+.dl-steps p{margin:0;font-size:.9375rem}
+.dl-role{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.dl-role>div{border-radius:var(--radius-card);padding:22px;background:var(--color-neutral-surface)}
+.dl-role .is-main{background:var(--color-brand-pale);border:1px solid var(--color-brand-soft)}
+.dl-role b{font-size:var(--type-caption);color:var(--color-brand-hover)}.dl-role p{margin:6px 0 0}
+.dl-guide{display:flex;flex-direction:column;gap:10px;border-radius:20px;padding:32px;background:var(--color-neutral-ink);color:#fff;text-decoration:none;transition:transform .2s}
+.dl-guide:hover{transform:translateY(-3px)}
+.dl-guide h3{color:#fff!important;font-size:1.5rem!important;font-weight:800;margin:0!important}
+.dl-guide p{color:#C6CDD6;margin:0}
+.dl-guide .dl-over{color:#4DA3FF}
+.dl-guide__cta{margin-top:auto;font-weight:700;color:#4DA3FF}
+@media (max-width:900px){.dl-steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.dl-steps,.dl-role{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.dl-guide{transition:none}}

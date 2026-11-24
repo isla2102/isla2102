@@ -15,7 +15,7 @@
 <header class="dl-top">
   <a class="brand" href="../index.html"><img class="brand__mark" src="../assets/icons/EdgeShot_logo_mark.svg" alt=""><span><b>Edge</b>Shot</span></a>
   <nav aria-label="만든 과정 목차">
-    <a href="#problem">문제</a><a href="#process">개발 과정</a><a href="#research">자료조사</a><a href="#product">프로덕트 디자인</a><a href="#web">웹 디자인</a><a href="#quality">검증</a><a href="#timeline">버전</a>
+    <a href="#problem">문제</a><a href="#process">개발 과정</a><a href="#findings">쓰면서 찾은 불편</a><a href="#product">프로덕트 디자인</a><a href="#web">웹 디자인</a><a href="#quality">검증</a><a href="#timeline">버전</a>
   </nav>
   <a class="dl-top__back" href="../index.html">랜딩으로 →</a>
 </header>
@@ -64,24 +64,23 @@
     </ol>
   </section>
 
-  <!-- 03 RESEARCH -->
-  <section class="dl-sec" id="research">
-    <div class="dl-sec__head"><span class="dl-no">03</span><div><h2>자료조사와 레퍼런스</h2><p>이미 쓰던 도구에서 무엇을 가져오고 무엇을 바꿨는지</p></div></div>
+  <!-- 03 FINDINGS -->
+  <section class="dl-sec" id="findings">
+    <div class="dl-sec__head"><span class="dl-no">03</span><div><h2>쓰면서 찾은 불편</h2><p>직접 쓰면서 걸린 점을 기록하고, 다음 버전의 범위로 삼았습니다</p></div></div>
     <div class="dl-table-wrap">
       <table class="dl-table">
-        <thead><tr><th scope="col">살펴본 것</th><th scope="col">가져온 점</th><th scope="col">다르게 간 점</th></tr></thead>
+        <thead><tr><th scope="col">쓰면서 걸린 점</th><th scope="col">v0.1.1에서 바꾼 것</th></tr></thead>
         <tbody>
-          <tr><td>Windows 기본 캡처 도구</td><td>전역 단축키로 바로 영역을 고르는 시작 방식</td><td>캡처 후 표시·가리기를 같은 화면에서 이어서 하도록</td></tr>
-          <tr><td>그림판 등 편집 앱</td><td>사각형·원·화살표·펜·텍스트라는 익숙한 도구 구성</td><td>별도 창을 열지 않고 캡처 오버레이 위에서 바로 편집</td></tr>
-          <tr><td>모자이크·블러 편집 앱</td><td>민감한 부분만 골라 가리는 방식</td><td>캡처 직후 같은 툴바에서, 강도 3단계로 단순화</td></tr>
-          <tr><td>앱 자체의 툴바 디자인</td><td>도구 아이콘과 단축키를 함께 보여 주는 구성</td><td>랜딩에서도 같은 SVG·순서를 그대로 써서 앱과 웹의 인상을 맞춤</td></tr>
+          <tr><td>그린 도형이나 모자이크 영역의 크기를 다시 바꿀 수 없음</td><td>사각형·원·펜·모자이크 영역 크기 조절</td></tr>
+          <tr><td>화살표 방향을 고치려면 지우고 다시 그려야 함</td><td>화살표 양 끝점을 끌어 조정</td></tr>
+          <tr><td>가리는 정도를 고를 수 없음</td><td>모자이크 강도 6 / 10 / 16</td></tr>
+          <tr><td>전역 단축키가 고정되어 다른 앱과 겹칠 수 있음</td><td>설정 창에서 단축키 변경</td></tr>
+          <tr><td>캡처할 때마다 색과 굵기를 다시 골라야 함</td><td>마지막으로 쓴 스타일 기억</td></tr>
+          <tr><td>저장할 때마다 위치와 형식을 정해야 함</td><td>기본 저장 폴더와 PNG / JPG 지정</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="dl-grid2">
-      <article class="dl-card"><h3>조사에서 바뀐 결정</h3><p>가리기 방식은 처음 블러(Blur)였지만 모자이크(pixelate)로 바꿨습니다. 강도는 v0.1.1에서 6 / 10 / 16 세 단계로 정리했습니다.</p></article>
-      <article class="dl-card"><h3>조사 방법</h3><p class="dl-blank">작성 필요 · 직접 비교해 본 다른 캡처 도구가 있다면 이름과 비교한 점</p></article>
-    </div>
+    <p class="dl-note">가리기 방식도 쓰면서 바꿨습니다. 처음에는 블러(Blur)였지만 모자이크(pixelate)로 바꿨습니다.</p>
   </section>
 
   <!-- 04 PRODUCT DESIGN -->
@@ -109,7 +108,7 @@
   <section class="dl-sec" id="web">
     <div class="dl-sec__head"><span class="dl-no">05</span><div><h2>웹 디자인</h2><p>랜딩을 화면으로 만들고, 그 기준을 디자인 시스템으로 남겼습니다</p></div></div>
     <div class="dl-split">
-      <div><h3>랜딩 진행 순서</h3><ol class="dl-rank"><li><b>①</b>디자인 시안과 콘텐츠 정비</li><li><b>②</b>이미지 디테일과 툴바 디테일</li><li><b>③</b>배포 준비</li></ol><p class="dl-note">Hi-fi 프로토타입(v3.9.5)을 최초 시안 기준으로 다시 정비해 v4.0 랜딩을 만들고, Figma에 데스크톱·태블릿·모바일 프레임과 토큰으로 옮겼습니다. v0.1.1에서는 아이콘 카드를 동작 데모로 바꿨습니다.</p></div>
+      <div><h3>랜딩 진행 순서</h3><ol class="dl-rank"><li><b>①</b>디자인 시안과 콘텐츠 정비</li><li><b>②</b>이미지 디테일과 툴바 디테일</li><li><b>③</b>배포 준비</li></ol><p class="dl-note">기능 이름을 나열하기보다 실제로 쓰는 장면을 보여 주는 데 집중했습니다. 그래서 아이콘 카드를 짧은 동작 데모로 바꾸고, 모바일에서도 같은 흐름이 읽히도록 정리했습니다.</p></div>
       <a class="dl-guide" href="../design-guide/index.html">
         <span class="dl-over">DESIGN GUIDE 2.0</span>
         <h3>랜딩의 모든 기준을 한 문서로</h3>

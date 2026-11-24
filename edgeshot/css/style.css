@@ -1420,3 +1420,9 @@ html.js-motion main>section:not(.in-view) *::after{animation-play-state:paused!i
   #edit .demo-ed-style .dm-swatches{gap:4px;left:8%}
   #edit .demo-ed-style .dm-chip{display:none}
 }
+
+/* footer: one link hub */
+.footer-links{display:flex;gap:var(--space-40);align-items:flex-start}
+.footer-group{display:grid;gap:var(--space-4);justify-items:start}
+.footer-group__title{font-size:var(--type-caption);font-weight:700;color:var(--color-neutral-subtle);letter-spacing:.02em;margin-bottom:var(--space-4)}
+@media (max-width:767px){.footer-links{justify-content:center;gap:var(--space-32)}.footer-group{justify-items:center}}

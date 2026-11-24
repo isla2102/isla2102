@@ -1383,3 +1383,40 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   .tb-opts{animation:none!important;opacity:0}
   .toolbar-demo .tb-item:nth-child(2) .tb-opts{opacity:1;transform:translate(-50%,0)}
 }
+
+/* ===== Edit-after cards: one row so all four fit one screen ===== */
+@media (min-width:1024px){
+  #edit .options-wrap{grid-column:1/-1}
+  #edit .tool-props{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  #edit .tool-prop.demo-card{padding:16px}
+  #edit .tool-prop.demo-card .demo{aspect-ratio:4/3;margin-bottom:12px}
+}
+@media (min-width:600px) and (max-width:1023px){
+  #edit .tool-props{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #edit .tool-prop.demo-card .demo{aspect-ratio:2/1}
+}
+
+/* ===== Hide before you share: points wipe in with each scene ===== */
+#privacy .point-list li{opacity:1!important;clip-path:inset(0 100% 0 0);animation:pvWipeA var(--pv) infinite}
+#privacy .point-list li:nth-child(2){animation-name:pvWipeB;animation-delay:0s}
+#privacy .point-list li:nth-child(3){animation-name:pvWipeC;animation-delay:0s}
+@keyframes pvWipeA{0%{clip-path:inset(0 100% 0 0)}10%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
+@keyframes pvWipeB{0%,33%{clip-path:inset(0 100% 0 0)}43%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
+@keyframes pvWipeC{0%,66%{clip-path:inset(0 100% 0 0)}76%,94%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
+
+/* ===== Play motion only once the section is on screen (JS adds .in-view) ===== */
+html.js-motion main>section:not(.in-view) *,
+html.js-motion main>section:not(.in-view) *::before,
+html.js-motion main>section:not(.in-view) *::after{animation-play-state:paused!important}
+
+@media (prefers-reduced-motion:reduce){
+  #privacy .point-list li{animation:none!important;clip-path:none}
+}
+@media (max-width:599px){
+  #edit .tool-props{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #edit .tool-prop.demo-card{padding:10px}
+  #edit .tool-prop.demo-card .demo{aspect-ratio:1/1;margin-bottom:8px;font-size:9px}
+  #edit .tool-prop.demo-card>span{font-size:12px}
+  #edit .demo-ed-style .dm-swatches{gap:4px;left:8%}
+  #edit .demo-ed-style .dm-chip{display:none}
+}

@@ -291,3 +291,23 @@ const getHeaderHeight=()=>viewportQueries.desktop.matches?56:(viewportQueries.mo
     scrollToSection(index);
   }));
 })();
+
+/* Start each section's motion when it scrolls into view (restart from the first frame) */
+(()=>{
+  if(!('IntersectionObserver' in window)) return;
+  const sections=[...document.querySelectorAll('main>section')];
+  if(!sections.length) return;
+  document.documentElement.classList.add('js-motion');
+  const anims=el=>el.getAnimations?el.getAnimations({subtree:true}):[];
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(({target,isIntersecting})=>{
+      if(isIntersecting&&!target.classList.contains('in-view')){
+        anims(target).forEach(a=>{try{a.currentTime=0}catch(e){}});
+        target.classList.add('in-view');
+      }else if(!isIntersecting&&target.classList.contains('in-view')){
+        target.classList.remove('in-view');
+      }
+    });
+  },{rootMargin:'-25% 0px -25% 0px',threshold:0});
+  sections.forEach(s=>io.observe(s));
+})();

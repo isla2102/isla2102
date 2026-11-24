@@ -654,7 +654,7 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   .split-media{margin-top:var(--layout-stacked-media-gap)}
   .story{grid-template-columns:repeat(var(--layout-grid-columns),minmax(0,1fr))}
   .story-panel{margin-top:var(--space-20)}
-  #features .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--component-feature-gap-tablet-portrait)}
+  :is(#usecases,#settings,#start) .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--component-feature-gap-tablet-portrait)}
   #story{padding-top:var(--layout-section-padding-story-portrait);padding-bottom:var(--layout-section-padding-story-portrait)}
   .hero-copy,
   .compare-copy,
@@ -691,8 +691,8 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   #annotation .split,#privacy .split{gap:var(--space-16)}
   #annotation .split-copy,#privacy .split-copy{grid-column:1/span 5}
   #annotation .split-media,#privacy .split-media{grid-column:6/span 7;margin-top:0}
-  #features .section-intro{margin-bottom:var(--layout-feature-intro-gap-tablet-landscape)}
-  #features .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  :is(#usecases,#settings,#start) .section-intro{margin-bottom:var(--layout-feature-intro-gap-tablet-landscape)}
+  :is(#usecases,#settings,#start) .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
   #annotation .demo-frame,
   #privacy .demo-frame{width:100%;max-width:none}
 }
@@ -708,7 +708,7 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   #compare .compare-carousel{grid-column:7/span 6;width:100%;justify-self:stretch}
   #compare .compare-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--component-compare-gap);width:100%;max-width:none;transform:none;padding:0}
   #compare .compare-cards .problem-card{min-width:0;width:100%;justify-self:stretch;flex:none}
-  #features .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  :is(#usecases,#settings,#start) .feature-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
   #annotation .demo-frame,
   #privacy .demo-frame{width:100%;max-width:none}
 }
@@ -716,11 +716,11 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
 /* Final grid normalization.
    Side-by-side layouts use 5+7 or 6+6, with Story retaining 7+5.
    Stacked layout regions span the full grid while responsive media ratios remain intact. */
-#features .features-layout{row-gap:0}
-#features .section-intro,
-#features .feature-wrap{grid-column:1/-1;width:100%;max-width:none}
-#features .section-intro p{max-width:none}
-#features .feature-cards{max-width:none}
+:is(#usecases,#settings,#start) .features-layout{row-gap:0}
+:is(#usecases,#settings,#start) .section-intro,
+:is(#usecases,#settings,#start) .feature-wrap{grid-column:1/-1;width:100%;max-width:none}
+:is(#usecases,#settings,#start) .section-intro p{max-width:none}
+:is(#usecases,#settings,#start) .feature-cards{max-width:none}
 
 #story .code-panel{width:100%;max-width:none}
 
@@ -816,9 +816,9 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   color:var(--muted);font-family:var(--font-ui);font-size:var(--type-caption);font-weight:500;
   line-height:1;text-align:center;white-space:nowrap;
 }
-#options .options-layout{row-gap:0}
-#options .section-intro{grid-column:1/-1;width:100%;max-width:none}
-#options .section-intro p{max-width:none}
+#edit .options-layout{row-gap:0}
+#edit .section-intro{grid-column:1/-1;width:100%;max-width:none}
+#edit .section-intro p{max-width:none}
 .options-wrap{grid-column:1/-1;min-width:0}
 /* Toolbar strip and option cards share one frame:
    full container below 900px, columns 2-11 on tablet landscape, columns 3-10 on desktop */
@@ -1089,3 +1089,18 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
 
 /* Deploy build: prototype viewport debug panel hidden */
 .viewport-debug{display:none!important}
+
+/* v0.1.1 landing additions */
+.hero-shortcut{margin-top:12px;color:var(--color-neutral-secondary);font-size:15px}
+.start-steps{list-style:none;padding:0;margin:0}
+.start-steps .step-no{display:block;color:var(--color-brand-primary);font-weight:700;font-size:13px;letter-spacing:.04em;margin-bottom:8px}
+.shortcut-sheet{margin-top:32px;border:1px solid var(--border-default);border-radius:var(--radius-card);background:var(--surface-page);padding:16px 20px}
+.shortcut-sheet>summary{cursor:pointer;font-weight:700;color:var(--color-neutral-ink)}
+.shortcut-sheet[open]>summary{margin-bottom:16px}
+.faq-layout{display:grid;gap:32px;max-width:880px}
+.faq-list{display:grid;gap:12px}
+.faq-item{border:1px solid var(--border-default);border-radius:var(--radius-floating);background:var(--surface-page);padding:16px 20px}
+.faq-item>summary{cursor:pointer;font-weight:700;color:var(--color-neutral-ink)}
+.faq-item>p{margin:12px 0 0;color:var(--color-neutral-secondary)}
+.cta-maker{margin-top:24px;color:var(--color-neutral-muted);font-size:14px}
+.cta-maker a{color:var(--color-brand-primary)}

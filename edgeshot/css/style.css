@@ -1297,3 +1297,89 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
 @keyframes flCopySel{0%,50%{box-shadow:0 0 0 999px rgba(21,26,33,.5);opacity:1}62%,100%{box-shadow:0 0 0 999px rgba(21,26,33,0);opacity:0}}
 @keyframes flToast{0%,50%{opacity:0;transform:translate(-50%,8px)}58%,90%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,0)}}
 @media (prefers-reduced-motion:reduce){.fl-4 .fl-sel{opacity:1}}
+
+/* ===== Hide before you share: mosaic story synced with points 1-2-3 ===== */
+#privacy{--pv:9s}
+#privacy .mk-row:nth-child(1) .mk-mosaic{transform-origin:left;animation:pvWipe1 var(--pv) infinite}
+#privacy .mk-row:nth-child(2) .mk-mosaic{position:relative;z-index:1;transform-origin:left;animation:pvMove var(--pv) infinite}
+#privacy .mk-annot{animation:pvLabel var(--pv) infinite}
+#privacy .mk-label{animation:pvLabel var(--pv) infinite}
+@keyframes pvWipe1{0%,4%{transform:scaleX(0)}14%,94%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes pvMove{0%,16%{transform:translateY(5.4cqw) scaleX(0);outline:0 dashed transparent}
+  26%{transform:translateY(5.4cqw) scaleX(1);outline:0 dashed transparent}
+  36%{transform:translateY(5.4cqw);outline:1.5px dashed var(--color-brand-primary);outline-offset:.4cqw}
+  52%{transform:none;outline:1.5px dashed var(--color-brand-primary);outline-offset:.4cqw}
+  60%,94%{transform:none;outline:0 dashed transparent;opacity:1}100%{transform:none;opacity:0}}
+@keyframes pvArrow{0%,68%{stroke-dashoffset:30;opacity:1}76%,94%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+@keyframes pvLabel{0%,72%{opacity:0;transform:scale(.85)}78%,94%{opacity:1;transform:none}100%{opacity:0}}
+#privacy .point-list li{opacity:.42;transition:opacity .3s;animation:pvPoint var(--pv) infinite}
+#privacy .point-list li:nth-child(2){animation-delay:calc(var(--pv) / 3)}
+#privacy .point-list li:nth-child(3){animation-delay:calc(var(--pv) * 2 / 3)}
+@keyframes pvPoint{0%,31%{opacity:1}35%,100%{opacity:.42}}
+
+/* ===== Tools & shortcuts: key -> tool on -> option bar ===== */
+#tools{--tb:14s}
+#tools .toolbar-scroll{padding-top:64px}
+.tb-tool{position:relative}
+.tb-opts{position:absolute;left:50%;bottom:calc(100% + 10px);z-index:5;display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:10px;background:#fff;border:1px solid var(--border-default);box-shadow:0 6px 18px rgba(21,26,33,.14);white-space:nowrap;opacity:0;transform:translate(-50%,6px);pointer-events:none;animation:tbOpts var(--tb) infinite;animation-delay:var(--d,0s)}
+.tb-tool:first-child .tb-opts{left:0;transform:translate(0,6px);animation-name:tbOptsL}
+.o-c{width:13px;height:13px;border-radius:50%;background:var(--c);border:1px solid rgba(0,0,0,.18)}
+.o-c:first-child{box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--color-neutral-ink)}
+.o-sep{width:1px;height:16px;background:var(--border-default);margin:0 2px}
+.o-w{width:16px;border-radius:3px;background:var(--color-neutral-ink)}.o-w.w1{height:2px}.o-w.w2{height:4px}.o-w.w3{height:6px}
+.o-t{font-size:12px;font-weight:600;color:var(--color-neutral-text);padding:1px 4px;border-radius:4px}
+.o-t.on{background:var(--color-brand-soft);color:var(--color-brand-primary)}
+.o-t.s1{font-size:10px}.o-t.s2{font-size:13px}.o-t.s3{font-size:16px}
+.tb-tool .tb-icon{animation:tbIcon var(--tb) infinite;animation-delay:var(--d,0s)}
+.tb-tool .tb-key{animation:tbKey var(--tb) infinite;animation-delay:var(--d,0s)}
+.toolbar-demo .tb-item:nth-child(2){--d:2s}.toolbar-demo .tb-item:nth-child(3){--d:4s}.toolbar-demo .tb-item:nth-child(4){--d:6s}
+.toolbar-demo .tb-item:nth-child(5){--d:8s}.toolbar-demo .tb-item:nth-child(6){--d:10s}.toolbar-demo .tb-item:nth-child(7){--d:12s}
+@keyframes tbOpts{0%,2%{opacity:0;transform:translate(-50%,6px)}5%,12%{opacity:1;transform:translate(-50%,0)}14.3%,100%{opacity:0;transform:translate(-50%,6px)}}
+@keyframes tbOptsL{0%,2%{opacity:0;transform:translate(0,6px)}5%,12%{opacity:1;transform:none}14.3%,100%{opacity:0;transform:translate(0,6px)}}
+@keyframes tbIcon{0%,1%{background:var(--toolbar-surface)}2%,13%{background:var(--color-brand-primary)}14.3%,100%{background:var(--toolbar-surface)}}
+@keyframes tbKey{0%{background:var(--surface-page);color:var(--muted);border-color:var(--border-default);transform:none}
+  1%{background:var(--color-brand-primary);color:#fff;border-color:var(--color-brand-primary);transform:translateY(1px)}
+  3%,13%{background:var(--color-brand-primary);color:#fff;border-color:var(--color-brand-primary);transform:none}
+  14.3%,100%{background:var(--surface-page);color:var(--muted);border-color:var(--border-default)}}
+@media (max-width:1023px){
+  .tb-tool{position:static}
+  #tools .toolbar-demo{position:relative}
+  .tb-opts,.tb-tool:first-child .tb-opts{left:50%;bottom:calc(100% + 10px);animation-name:tbOpts}
+}
+
+/* ===== Privacy by design: data stays inside the PC ===== */
+.local-visual{grid-column:6/span 7;min-width:0}
+.local-map{display:block;width:100%;height:auto;font-family:inherit}
+.local-map text{fill:#fff;font-size:13px;font-weight:600;text-anchor:middle}
+.local-map .lm-sub{font-size:10px;font-weight:500;fill:rgba(255,255,255,.72)}
+.lm-pc{fill:rgba(255,255,255,.03);stroke:rgba(255,255,255,.3);stroke-width:1.5;stroke-dasharray:6 6}
+.local-map .lm-pc-label{text-anchor:start;fill:#6FB1FF;font-size:12px;font-weight:700;letter-spacing:.04em}
+.lm-node rect{fill:#242B35;stroke:rgba(255,255,255,.18)}
+.lm-core rect{fill:var(--color-brand-primary);stroke:none}
+.lm-path{stroke:rgba(255,255,255,.35);stroke-width:1.5;fill:none}
+.lm-out{stroke:rgba(255,255,255,.22);stroke-width:1.5;stroke-dasharray:4 5;fill:none}
+.lm-block circle{fill:#151A21;stroke:var(--color-annotation-red);stroke-width:2}
+.lm-block path{stroke:var(--color-annotation-red);stroke-width:2.2;stroke-linecap:round}
+.lm-cloud path{fill:none;stroke:rgba(255,255,255,.35);stroke-width:1.5}
+.local-map .lm-cloud text{fill:rgba(255,255,255,.5)}
+.local-map .lm-cloud .lm-sub{fill:rgba(255,255,255,.45)}
+.lm-dot{fill:#6FB1FF;opacity:0}
+.lm-dot.d1{animation:lmToClip 4s linear infinite}
+.lm-dot.d2{animation:lmToFolder 4s linear infinite 2s}
+.lm-dot.d3{animation:lmToClip 4s linear infinite 1s}
+.lm-dot.lm-bounce{fill:var(--color-annotation-red);animation:lmBounce 4s ease-in-out infinite 3s}
+@keyframes lmToClip{0%{opacity:0;transform:translate(118px,104px)}8%{opacity:1}45%{transform:translate(222px,150px)}90%{opacity:1;transform:translate(294px,98px)}100%{opacity:0;transform:translate(300px,90px)}}
+@keyframes lmToFolder{0%{opacity:0;transform:translate(118px,104px)}8%{opacity:1}45%{transform:translate(222px,150px)}90%{opacity:1;transform:translate(294px,206px)}100%{opacity:0;transform:translate(300px,214px)}}
+@keyframes lmBounce{0%,10%{opacity:0;transform:translate(282px,150px)}20%{opacity:.9}55%{opacity:.9;transform:translate(366px,150px)}75%,100%{opacity:0;transform:translate(340px,150px)}}
+.none-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.none-list li{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;color:var(--text-inverse);font-size:13px;line-height:1.3}
+.none-list img{width:18px;height:18px;flex:none;filter:var(--icon-filter-inverse);opacity:.85}
+@media (max-width:1023px){.local-visual{grid-column:1/-1;margin-top:var(--layout-stacked-media-gap)}}
+@media (max-width:767px){.none-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+@media (prefers-reduced-motion:reduce){
+  #privacy .mk-mosaic,#privacy .mk-annot,#privacy .mk-label,#privacy .point-list li,.tb-tool .tb-icon,.tb-tool .tb-key,.lm-dot{animation:none!important}
+  #privacy .point-list li{opacity:1}
+  .tb-opts{animation:none!important;opacity:0}
+  .toolbar-demo .tb-item:nth-child(2) .tb-opts{opacity:1;transform:translate(-50%,0)}
+}

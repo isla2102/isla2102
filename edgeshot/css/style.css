@@ -1150,12 +1150,6 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
 @keyframes dmRect{0%,8%{clip-path:inset(0 100% 100% 0)}28%,100%{clip-path:inset(0 0 0 0)}}
 @keyframes dmType{0%,46%{max-width:0}70%,100%{max-width:120px}}
 
-/* how to use: steps float in sequence */
-@keyframes dmFloat{0%,4%{transform:none}10%{transform:translateY(-10px)}20%,100%{transform:none}}
-#flow .flow-item .step-media{animation:dmFloat 8s ease-in-out infinite;will-change:transform}
-#flow .flow-item:nth-child(2) .step-media{animation-delay:1.6s}
-#flow .flow-item:nth-child(3) .step-media{animation-delay:3.2s}
-#flow .flow-item:nth-child(4) .step-media{animation-delay:4.8s}
 
 /* edit 1: resize */
 .demo-ed-resize .dm-shape{position:absolute;left:18%;top:22%;width:34%;height:34%;border:2.5px solid var(--color-annotation-red);border-radius:3px;outline:1px dashed var(--color-brand-primary);outline-offset:4px;animation:dmGrow var(--dur) ease-in-out infinite}
@@ -1252,6 +1246,54 @@ h3{color:var(--ink);font-size:var(--type-card);font-weight:600;line-height:var(-
   .demo-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (prefers-reduced-motion:reduce){
-  .demo *,.demo *::before,.demo *::after,#flow .flow-item .step-media{animation:none!important}
+  .demo *,.demo *::before,.demo *::after{animation:none!important}
   .demo-sg-capture .dm-dim,.demo-sg-capture .dm-sel{opacity:1;clip-path:none}
 }
+
+/* how to use: 4 step motion demos (recreations) */
+.demo-fl{position:absolute;inset:0;aspect-ratio:auto;border:0;border-radius:0;--dur:5s;background:url(../assets/images/flow_forest_milky.webp) center/cover}
+.fl-sel{position:absolute;left:18%;top:18%;width:56%;height:52%;border:2px solid var(--color-brand-primary);box-shadow:0 0 0 999px rgba(21,26,33,.5)}
+.fl-cur{position:absolute;width:16px;height:16px;background:#fff;clip-path:polygon(0 0,0 100%,30% 72%,52% 100%,66% 92%,46% 64%,85% 64%);filter:drop-shadow(0 1px 1px rgba(0,0,0,.6))}
+.fl-size{position:absolute;left:0;top:-22px;padding:2px 6px;border-radius:4px;background:var(--color-brand-primary);color:#fff;font-size:10px;font-weight:600;white-space:nowrap}
+/* 1: drag to select */
+.fl-1 .fl-sel{animation:flDrag var(--dur) ease-in-out infinite}
+.fl-1 .fl-cur{animation:flDragCur var(--dur) ease-in-out infinite}
+@keyframes flDrag{0%,12%{width:0;height:0;opacity:0}14%{opacity:1;width:0;height:0}55%,90%{width:56%;height:52%;opacity:1}100%{width:56%;height:52%;opacity:0}}
+@keyframes flDragCur{0%,14%{left:18%;top:18%}55%,90%{left:74%;top:70%}100%{left:74%;top:70%;opacity:0}}
+/* 2: resize */
+.fl-sel .h{position:absolute;width:8px;height:8px;margin:-5px 0 0 -5px;background:#fff;border:1.5px solid var(--color-brand-primary);border-radius:2px}
+.h.tl{left:0;top:0}.h.tm{left:50%;top:0}.h.tr{left:100%;top:0}.h.ml{left:0;top:50%}.h.mr{left:100%;top:50%}.h.bl{left:0;top:100%}.h.bm{left:50%;top:100%}.h.br{left:100%;top:100%}
+.fl-2 .fl-sel{animation:flResize var(--dur) ease-in-out infinite}
+.fl-2 .fl-cur{animation:flResizeCur var(--dur) ease-in-out infinite}
+@keyframes flResize{0%,15%{width:40%;height:38%}50%,80%{width:64%;height:62%}100%{width:40%;height:38%}}
+@keyframes flResizeCur{0%,15%{left:58%;top:56%}50%,80%{left:82%;top:80%}100%{left:58%;top:56%}}
+/* 3: annotate */
+.fl-tb{position:absolute;right:0;top:calc(100% + 6px);display:flex;gap:2px;padding:3px 4px;background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.fl-tb img{width:13px;height:13px;padding:1px;border-radius:3px}
+.fl-3 .t-arrow{animation:flTool1 var(--dur) infinite}.fl-3 .t-rectangle{animation:flTool2 var(--dur) infinite}.fl-3 .t-text{animation:flTool3 var(--dur) infinite}
+@keyframes flTool1{0%,6%,34%,100%{background:none}10%,30%{background:var(--color-brand-soft)}}
+@keyframes flTool2{0%,34%,62%,100%{background:none}38%,58%{background:var(--color-brand-soft)}}
+@keyframes flTool3{0%,62%,90%,100%{background:none}66%,86%{background:var(--color-brand-soft)}}
+.fl-arrow{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--color-annotation-red);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.fl-arrow path:first-child{stroke-dasharray:60;animation:flArrow var(--dur) infinite}
+.fl-arrow .hd{animation:flShow1 var(--dur) infinite}
+.fl-box{position:absolute;left:60%;top:52%;width:30%;height:34%;border:2.5px solid var(--color-annotation-red);border-radius:3px}
+.fl-txt{position:absolute;left:8%;top:62%;color:#fff;font-weight:800;font-size:15px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.fl-3 .fl-box{animation:flBox var(--dur) infinite}
+.fl-3 .fl-txt{animation:flShow3 var(--dur) infinite}
+@keyframes flArrow{0%,10%{stroke-dashoffset:60}28%,100%{stroke-dashoffset:0}}
+@keyframes flShow1{0%,27%{opacity:0}30%,100%{opacity:1}}
+@keyframes flBox{0%,38%{clip-path:inset(0 100% 100% 0)}56%,100%{clip-path:inset(0)}}
+@keyframes flShow3{0%,66%{opacity:0;transform:scale(.7)}74%,100%{opacity:1;transform:none}}
+/* 4: copy + toast */
+.fl-4 .fl-sel{animation:flCopySel var(--dur) infinite}
+.fl-flash{position:absolute;inset:0;background:#fff;opacity:0;animation:flFlash var(--dur) infinite}
+.fl-keys{position:absolute;left:8px;top:8px;display:flex;gap:4px}
+.fl-keys kbd{animation:flKey var(--dur) infinite}
+.fl-toast{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);padding:6px 12px;border-radius:999px;background:var(--color-neutral-ink);color:#fff;font-size:11px;font-weight:600;white-space:nowrap;animation:flToast var(--dur) infinite}
+.fl-4 .t-copy{animation:flTool2 var(--dur) infinite}
+@keyframes flKey{0%,22%,40%,100%{background:#fff;color:var(--color-neutral-ink)}26%,36%{background:var(--color-brand-primary);color:#fff}}
+@keyframes flFlash{0%,34%{opacity:0}38%{opacity:.7}46%,100%{opacity:0}}
+@keyframes flCopySel{0%,50%{box-shadow:0 0 0 999px rgba(21,26,33,.5);opacity:1}62%,100%{box-shadow:0 0 0 999px rgba(21,26,33,0);opacity:0}}
+@keyframes flToast{0%,50%{opacity:0;transform:translate(-50%,8px)}58%,90%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,0)}}
+@media (prefers-reduced-motion:reduce){.fl-4 .fl-sel{opacity:1}}
